@@ -1,0 +1,19 @@
+input {
+    /*display: inline-block;*/
+}
+
+label {
+    float: left;
+}
+
+.go-button {
+    background: blue;
+    color: white;
+    float: right;
+    font-style: bolder;
+    padding: 10px;
+}
+
+.section-container {
+    clear: both;
+}
