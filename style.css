@@ -46,13 +46,11 @@ label {
     text-align: center;
 }
 
-#process-instances {
+/* CLASSES */
+.section-container {
     display: inline-flex;
     padding: 5px;
 }
-
-
-/* CLASSES */
 
 .go-button {
     -webkit-border-radius: 3px;

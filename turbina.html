@@ -9,14 +9,24 @@
             <h1>Turbina nav</h1>
             <pre>Turbina navigator 1.0</pre>
         </div>
+
         <hr>
+
         <div id="process-instances" class="section-container">
             <div>
                 <input id="process-instance-input" name="process-instance-input" type="text" placeholder="Process instance id"/>
             </div>
             <div>
-                <label id="go-process-instance" class="go-button" type="button">GO</label>
+                <label id="go-process-instance" type="processinstance" for="process-instance-input" class="go-button" type="button">GO</label>
+            </div>
+        </div>
 
+        <div id="task-instances" class="section-container">
+            <div>
+                <input id="task-instance-input" name="task-instance-input" type="text" placeholder="Task instance id"/>
+            </div>
+            <div>
+                <label id="go-task-instance" type="task" for="task-instance-input" class="go-button" type="button">GO</label>
             </div>
         </div>
 
