@@ -1,4 +1,22 @@
 $(function() {
+    var ENVIRONMENTS_CONFIGS_KEY = 'environments_configs';
+    // UTILS
+    function getEnvironmentsConfigs() {
+        chrome.storage.sync.set({ ENVIRONMENTS_CONFIGS_KEY: "myBody" }, function(){
+            console.log('Data saved');
+        });
+        var currentConfigs = chrome.storage.sync.get([ENVIRONMENTS_CONFIGS_KEY], function(items) {
+            console.log(`Items: ${items}`);
+        })
+    }
+
+    function slideToggleContainers() {
+        $('#new-environment-container').slideToggle();
+        $('#actions-container').slideToggle();
+    }
+
+    // APPLICATION
+
     $('.go-button').click(function() {
         var closestInputId = $(this).attr('for');
         var procInst = $(`#${closestInputId}`);
@@ -29,16 +47,12 @@ $(function() {
         window.open(url, '_blank')
     });
 
-    function slideToggleContainers() {
-        $('#new-environment-container').slideToggle();
-        $('#actions-container').slideToggle();
-    }
-
     // NEW ENVIRONMENT
     $('#add-environment-btn').click(function() {
         $('#add-environment-btn').toggleClass('toggled-button');
         slideToggleContainers();
     });
+
 
     $('#ok-new-env-btn').click(function() {
         var envName    = $('#environment-name-input');
@@ -67,7 +81,11 @@ $(function() {
 
         $('#environments-select').append(newOption);
         $('#environments-select').val(envNameVal);
-        slideToggleContainers()
+        slideToggleContainers();
+
+
+
+        chrome.storage.sync.set()
 
     });
 
