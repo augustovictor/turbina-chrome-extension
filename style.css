@@ -1,6 +1,20 @@
 /* TAGS */
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 body {
     background: #f8f8f8;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 200;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid lightgray;
 }
 
 input {
@@ -8,13 +22,18 @@ input {
     border: 1px solid lightgray;
     color: #666;
     float: left;
-    line-height: 20px;
+    line-height: 19px;
     margin-right: 5px;
-    padding: 2px 5px;
-}
+    padding: 3px 5px;
 
+}
 input:focus {
     outline: none;
+}
+
+pre {
+    text-align: center;
+    color: gray;
 }
 
 label {
@@ -22,6 +41,10 @@ label {
     float: right;
 }
 /* IDS */
+
+#header-container {
+    text-align: center;
+}
 
 #process-instances {
     display: inline-flex;
@@ -38,7 +61,7 @@ label {
     cursor: pointer;
     float: right;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 7px 10px;
 }
 
 .go-button:hover {
