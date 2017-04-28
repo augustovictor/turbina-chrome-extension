@@ -12,22 +12,15 @@
         // 48 x 48 - Extensions management page
         // 16 x 16 - Shown in browser
     },
-    // "background": {
-    //     "scripts": [
-    //         "Turbina.js"
-    //     ]
-    // },
 
     // Type of action: Browser, Page or none
     "browser_action": {
         "default_title": "Turbina url navigator",
-        "default_popup": "Turbina.html"
+        "default_popup": "turbina.html"
     },
 
     // Intent of app. What you will access from the user
     "permissions": [
-        "tabs",
-        "http://*/*",
-        "https://*/*"
+        "<all_urls>"
     ]
 }
