@@ -148,7 +148,9 @@ $(function() {
         slideToggleContainers();
 
         saveData({[`ENV_${envNameVal}`]: envBaseUrl.val()});
-
+        
+        envName.val('');
+        envBaseUrl.val('');
     });
 
     // APPLICATION CHANGES
