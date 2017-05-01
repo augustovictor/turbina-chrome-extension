@@ -54,6 +54,11 @@ label {
     display: none;
 }
 
+#about-container {
+    width: 235px;
+    display: none;
+}
+
 #environments-select {
     height: 27px;
     margin-right: 5px;
@@ -69,8 +74,13 @@ label {
     padding: 0px 13px;
 }
 
+#about-btn, #back-btn {
+    padding-right: 7px;
+    text-align: right;
+}
+
 /* CLASSES */
-hr.dotted {
+hr.dashed {
     border-top: 1px dashed lightgray;
 }
 .pre-header-title {
@@ -78,8 +88,22 @@ hr.dotted {
 }
 
 .section-container {
+    clear: both;
     display: inline-flex;
     padding: 5px;
+}
+
+.text-container {
+    color: gray;
+    font-family: Consolas,monospace;
+    font-size: 10px;
+    padding: 0 5px;
+    text-align: center;
+}
+
+.fake-link {
+    cursor: pointer;
+    letter-spacing: 1px;
 }
 
 .go-button {
@@ -104,11 +128,6 @@ hr.dotted {
 .toggled-button {
     background: #02a27a !important;
 }
-
-.section-container {
-    clear: both;
-}
-
 .error {
     border: 1px solid red;
 }

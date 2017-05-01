@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>Turbina url navigator</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+
         <div id="header-container">
             <h1>Turbina nav</h1>
             <pre>Turbina navigator 1.0</pre>
@@ -12,61 +14,85 @@
 
         <hr>
 
-        <!--ENVIRONMENTS CONTAINER-->
-        <div id="environments-container">
-            <pre class="pre-header-title">AMBIENTES</pre>
+        <!--ABOUT-->
+        <div id="about-container">
+            <pre class="pre-header-title">SOBRE</pre>
+            <div class="text-container">
+                <p>
+                    Esta extensão com o objetivo de facilitar a busca de instâncias no turbina.
+                </p>
+                .
+                <p>
+                    Icolabora Time de produtos
+                    <br>
+                    04/2017
+                </p>
+            </div>
+            <hr class="dashed">
+            <pre id="back-btn" class="fake-link">Voltar</pre>
+        </div>
 
-            <div class="section-container">
-                <select name="environments-select" id="environments-select"></select>
-                <div>
-                    <label id="add-environment-btn" type="task" for="environments-select" type="button">+</label>
-                </div>
-            </div>
-        </div>
-        <!--NEW ENVIRONMENT CONTAINER-->
-        <div id="new-environment-container">
-            <hr class="dotted">
-            <pre class="pre-header-title">NOVO AMBIENTE</pre>
+        <!--APPLICATION CONTAINER-->
+        <div id="application-container">
+            <!--ENVIRONMENTS CONTAINER-->
+            <div id="environments-container">
+                <pre class="pre-header-title">AMBIENTES</pre>
 
-            <!--SECTION CONTAINER-->
-            <div class="section-container">
-                <input id="environment-name-input" name="environment-name-input" type="text" placeholder="Nome do ambiente"/>
-            </div>
-            <!--SECTION CONTAINER-->
-            <div class="display-inline section-container">
-                <div>
-                    <input id="environment-baseurl-input" name="environment-baseurl-input" type="text" placeholder="http://amb.icolabora.com.br"/>
-                </div>
-                <div>
-                    <label id="ok-new-env-btn" type="newenv" class="go-button" type="button">OK</label>
+                <div class="section-container">
+                    <select name="environments-select" id="environments-select"></select>
+                    <div>
+                        <label id="add-environment-btn" type="task" for="environments-select" type="button">+</label>
+                    </div>
                 </div>
             </div>
-            <div class="section-container">
-                <pre id="remove-selected-env-btn">Quero remover o ambiente selecionado</pre>
+            <!--NEW ENVIRONMENT CONTAINER-->
+            <div id="new-environment-container">
+                <hr class="dashed">
+                <pre class="pre-header-title">NOVO AMBIENTE</pre>
+
+                <!--SECTION CONTAINER-->
+                <div class="section-container">
+                    <input id="environment-name-input" name="environment-name-input" type="text" placeholder="Nome do ambiente"/>
+                </div>
+                <!--SECTION CONTAINER-->
+                <div class="display-inline section-container">
+                    <div>
+                        <input id="environment-baseurl-input" name="environment-baseurl-input" type="text" placeholder="http://amb.icolabora.com.br"/>
+                    </div>
+                    <div>
+                        <label id="ok-new-env-btn" type="newenv" class="go-button" type="button">OK</label>
+                    </div>
+                </div>
+                <div class="section-container">
+                    <pre id="remove-selected-env-btn">Quero remover o ambiente selecionado</pre>
+                </div>
+            </div>
+            <!--ACTIONS CONTAINER-->
+            <div id="actions-container">
+                <hr>
+                <!--SECTION CONTAINER-->
+                <div id="process-instances" class="section-container">
+                    <div>
+                        <input id="process-instance-input" name="process-instance-input" type="text" placeholder="Process instance id"/>
+                    </div>
+                    <div>
+                        <label id="go-process-instance" type="processinstance" for="process-instance-input" class="go-button" type="button">GO</label>
+                    </div>
+                </div>
+                <!--SECTION CONTAINER-->
+                <div id="task-instances" class="section-container">
+                    <div>
+                        <input id="task-instance-input" name="task-instance-input" type="text" placeholder="Task instance id"/>
+                    </div>
+                    <div>
+                        <label id="go-task-instance" type="task" for="task-instance-input" class="go-button" type="button">GO</label>
+                    </div>
+                </div>
+                <hr class="dashed">
+                <pre id="about-btn" class="fake-link">Sobre</pre>
             </div>
         </div>
-        <!--ACTIONS CONTAINER-->
-        <div id="actions-container">
-            <hr>
-            <!--SECTION CONTAINER-->
-            <div id="process-instances" class="section-container">
-                <div>
-                    <input id="process-instance-input" name="process-instance-input" type="text" placeholder="Process instance id"/>
-                </div>
-                <div>
-                    <label id="go-process-instance" type="processinstance" for="process-instance-input" class="go-button" type="button">GO</label>
-                </div>
-            </div>
-            <!--SECTION CONTAINER-->
-            <div id="task-instances" class="section-container">
-                <div>
-                    <input id="task-instance-input" name="task-instance-input" type="text" placeholder="Task instance id"/>
-                </div>
-                <div>
-                    <label id="go-task-instance" type="task" for="task-instance-input" class="go-button" type="button">GO</label>
-                </div>
-            </div>
-        </div>
+        
         <script src="jquery-2.2.4.min.js"></script>
         <script src="turbina.js"></script>
     </body>

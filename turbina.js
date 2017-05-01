@@ -183,6 +183,12 @@ $(function() {
         chrome.storage.sync.set({[global_keys.DEFAULT_ENV]: selectedEnv.val()});
     });
 
+    // ABOUT
+    $('#about-btn, #back-btn').click(function() {
+        $('#about-container').slideToggle();
+        $('#application-container').slideToggle();
+    })
+
     // APPLICATION CHANGES
     $('#environment-name-input, #environment-baseurl-input').change(function() {
         var envName    = $('#environment-name-input');
