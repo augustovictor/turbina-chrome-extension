@@ -176,6 +176,13 @@ $(function() {
         envBaseUrl.val('');
     });
 
+    $('#remove-selected-env-btn').click(function() {
+        var selectedEnv = $('#environments-select');
+        chrome.storage.sync.remove([`ENV_${selectedEnv.val()}`]);
+        $(`#environments-select option[value=${selectedEnv.val()}]`).remove();
+        chrome.storage.sync.set({[global_keys.DEFAULT_ENV]: selectedEnv.val()});
+    });
+
     // APPLICATION CHANGES
     $('#environment-name-input, #environment-baseurl-input').change(function() {
         var envName    = $('#environment-name-input');
@@ -196,7 +203,7 @@ $(function() {
 
     // INIT APPLICATION
     (function init() {
-        clearAllKeys();
+        // clearAllKeys();
         buildConfigs();
         selectDefaultEnv();
         checkIfThereIsEnvToShowActions();
