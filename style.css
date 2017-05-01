@@ -50,10 +50,6 @@ label {
     text-align: center;
 }
 
-#actions-container {
-    display: none;
-}
-
 #new-environment-container {
     display: none;
 }

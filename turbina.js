@@ -67,9 +67,9 @@ $(function() {
     function checkIfThereIsEnvToShowActions() {
         chrome.storage.sync.get(global_keys.DEFAULT_ENV, function(data) {
             if(data[global_keys.DEFAULT_ENV]) {
-                $('#actions-container').slideDown();
+                $('#actions-container').show();
             } else {
-                $('actions-container').slideUp();
+                // $('actions-container').slideUp();
             }
         })
     }
@@ -98,6 +98,13 @@ $(function() {
         var procInst = $(`#${closestInputId}`);
         var environment = $(`#environments-select option[value=${$('#environments-select').val()}]`);
         var resourceType;
+
+        
+
+        if(!$('#environments-select').val()) {
+            return false;
+        }
+        
         if(!procInst.val()) {
             procInst.focus();
             procInst.addClass('error');
@@ -127,7 +134,6 @@ $(function() {
     $('#add-environment-btn').click(function() {
         $('#add-environment-btn').toggleClass('toggled-button');
         slideToggleContainers();
-        $('#actions-container').hide();
     });
 
 
@@ -164,6 +170,8 @@ $(function() {
 
         saveData({[`ENV_${envNameVal}`]: envBaseUrl.val()});
 
+        $('#actions-container').slideDown();
+
         envName.val('');
         envBaseUrl.val('');
     });
@@ -188,7 +196,7 @@ $(function() {
 
     // INIT APPLICATION
     (function init() {
-        // clearAllKeys();
+        clearAllKeys();
         buildConfigs();
         selectDefaultEnv();
         checkIfThereIsEnvToShowActions();
