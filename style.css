@@ -18,14 +18,19 @@ hr {
     clear: both;
 }
 
+
 input {
     border-radius: 3px;
     border: 1px solid lightgray;
     color: #666;
     line-height: 19px;
-    margin-right: 5px;
-    padding: 3px 5px;
 
+}
+input, select {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box; 
+    padding: 3px 5px;
+    width: 180px;
 }
 input:focus, select:focus {
     outline: none;
@@ -46,19 +51,15 @@ label {
 }
 
 #environment-name-input {
-    margin-left: -5px;
-    margin-bottom: 5px;
 }
 
 #new-environment-container {
     display: none;
-    padding: 3px 5px;
 }
 
 #environments-select {
     height: 27px;
     margin-right: 5px;
-    width: 180px;
 }
 
 #add-environment-btn {
@@ -66,7 +67,6 @@ label {
     border-radius: 3px;
     color: white;
     cursor: pointer;
-    float: right;
     font-weight: bold;
     font-size: 23px;
     padding: 0px 13px;
@@ -92,6 +92,7 @@ hr.dotted {
     cursor: pointer;
     float: right;
     font-weight: bold;
+    margin-left: 5px;
     padding: 7px 11px;
 }
 
