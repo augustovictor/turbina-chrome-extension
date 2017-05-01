@@ -19,13 +19,13 @@
             <pre class="pre-header-title">SOBRE</pre>
             <div class="text-container">
                 <p>
-                    Esta extensão com o objetivo de facilitar a busca de instâncias no turbina.
+                    Esta extensão tem como objetivo facilitar a busca de instâncias no turbina.
                 </p>
                 .
                 <p>
                     Icolabora Time de produtos
                     <br>
-                    04/2017
+                    05/2017
                 </p>
             </div>
             <hr class="dashed">
@@ -41,13 +41,16 @@
                 <div class="section-container">
                     <select name="environments-select" id="environments-select"></select>
                     <div>
-                        <label id="add-environment-btn" type="task" for="environments-select" type="button">+</label>
+                        <div id="add-environment-btn" type="task" for="environments-select">
+                            <span class="arrow-down"></span>
+                        </div>
                     </div>
                 </div>
             </div>
             <!--NEW ENVIRONMENT CONTAINER-->
             <div id="new-environment-container">
                 <hr class="dashed">
+
                 <pre class="pre-header-title">NOVO AMBIENTE</pre>
 
                 <!--SECTION CONTAINER-->
@@ -63,9 +66,13 @@
                         <label id="ok-new-env-btn" type="newenv" class="go-button" type="button">OK</label>
                     </div>
                 </div>
-                <div class="section-container">
-                    <pre id="remove-selected-env-btn">Quero remover o ambiente selecionado</pre>
-                </div>
+
+                <hr class="dashed">
+
+                <pre class="pre-header-title">REMOVER AMBIENTE SELECIONADO</pre>
+                    <div id="remove-selected-env-btn" class="danger-btn fake-link">
+                        Remover
+                    </div>
             </div>
             <!--ACTIONS CONTAINER-->
             <div id="actions-container">
