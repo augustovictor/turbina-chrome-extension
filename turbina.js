@@ -93,6 +93,8 @@ $(function() {
 
     // APPLICATION
 
+    $('#process-instance-input').focus()
+
     $('.go-button').click(function() {
         var closestInputId = $(this).attr('for');
         var procInst = $(`#${closestInputId}`);
